@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">keyboard</string>
+    <string name="ime_subtype_en">English (US)</string>
+    <string name="ime_subtype_zh">中文（简体）</string>
 </resources>
