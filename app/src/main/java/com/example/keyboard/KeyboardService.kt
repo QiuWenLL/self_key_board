@@ -38,6 +38,9 @@ class KeyboardService : InputMethodService(), LifecycleOwner, ViewModelStoreOwne
         super.onCreate()
         savedStateRegistryController.performRestore(null)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
+        
+        // 键盘启动时，在后台线程装载本地词库
+        PinyinEngine.init(this)
     }
 
     override fun onCreateInputView(): View {
